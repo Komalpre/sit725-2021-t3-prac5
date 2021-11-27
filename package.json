@@ -1,0 +1,23 @@
+{
+  "name": "sit725-prac2",
+  "version": "1.0.0",
+  "description": "Hello world",
+  "main": "server.js",
+  "scripts": {
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Komalpre/sit725-2021-t3-prac2.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express"
+  ],
+  "author": "Komalpre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Komalpre/sit725-2021-t3-prac2/issues"
+  },
+  "homepage": "https://github.com/Komalpre/sit725-2021-t3-prac2#readme"
+}
