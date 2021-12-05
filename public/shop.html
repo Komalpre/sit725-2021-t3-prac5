@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <link rel="shortcut icon" href="img/icon.svg" type="image/svg" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container container--md">
+        <div class="navbar__logo">
+          <img src="img/icon.svg" alt="" />
+          <h4>Electronics Shop</h4>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item">
+            <a href="home.html">Home</a>
+          </li>
+          <li class="navbar__menu__item active">
+            <a href="shop.html">Shop</a>
+          </li>
+          <li class="navbar__menu__item">
+            <a href="contact.html">Contact</a>
+          </li>
+          <li class="notAuth navbar__menu__item hidden">
+            <a href="signin.html">Sign in</a>
+          </li>
+          <li class="notAuth navbar__menu__item hidden">
+            <a href="signup.html">Sign up</a>
+          </li>
+          <li class="isAuth navbar__menu__item hidden">
+            <button class="btn btn--primary btn--sm" onclick="signOut()">Sign out</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container container--md">
+      <h1 class="container__title">Shop</h1>
+      <ol id="wishlist" class="isAuth hidden">
+        <h5>Your wish list is empty</h5>
+      </ol>
+      <div class="products">
+        <div class="product">
+          <div class="product__image">
+            <img src="https://i5.walmartimages.com/asr/cdc5ea12-a214-4601-a971-f4f692231685.03d49a2a3f4fb25f04d4c2250be7ddc2.jpeg?odnWidth=282&odnHeight=100&odnBg=ffffff" alt="" />
+          </div>
+          <h3>SAMSUNG 65" Class 4K Crystal UHD (2160P) LED Smart TV with HDR UN65TU7000</h3>
+          <p>$647.99</p>
+          <div class="product__footer isAuth hidden">
+            <button onclick="addWishList('SAMSUNG 65 Class 4K Crystal UHD (2160P) LED Smart TV with HDR UN65TU7000')" class="btn btn--primary btn--block">Add to wish list</button>
+            <button onclick="buyProduct('SAMSUNG 65 Class 4K Crystal UHD (2160P) LED Smart TV with HDR UN65TU7000')" class="btn btn--primary btn--solid btn--block">Buy</button>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__image">
+            <img src="https://i5.walmartimages.com/asr/08118338-0b9b-427c-b93b-3b68bdf33d7f.da3d374218e7237bf182f382304edbd0.jpeg?odnWidth=282&odnHeight=100&odnBg=ffffff" alt="" />
+          </div>
+          <h3>Bose TV Speaker — Bluetooth Soundbar with HDMI-ARC Connectivity, Black</h3>
+          <p>$359.00</p>
+          <div class="product__footer isAuth hidden">
+            <button onclick="addWishList('Bose TV Speaker — Bluetooth Soundbar with HDMI-ARC Connectivity, Black')" class="btn btn--primary btn--block">Add to wish list</button>
+            <button onclick="buyProduct('Bose TV Speaker — Bluetooth Soundbar with HDMI-ARC Connectivity, Black')" class="btn btn--primary btn--solid btn--block">Buy</button>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__image">
+            <img src="https://i5.walmartimages.com/asr/d3ba66f7-dcef-4bbb-910a-caf713f8bc7f_1.083d60d564f1ded8dd7d16be598aa413.jpeg?odnHeight=200&odnWidth=100&odnBg=ffffff" alt="" />
+          </div>
+          <h3>Sony 4K Ultra HD Home Theater Streaming Blu-Ray Player with High-Resolution Audio and Wi-Fi UBP-X700</h3>
+          <p>$179.00</p>
+          <div class="product__footer isAuth hidden">
+            <button onclick="addWishList('Sony 4K Ultra HD Home Theater Streaming Blu-Ray Player with High-Resolution Audio and Wi-Fi UBP-X700')" class="btn btn--primary btn--block">Add to wish list</button>
+            <button onclick="buyProduct('Sony 4K Ultra HD Home Theater Streaming Blu-Ray Player with High-Resolution Audio and Wi-Fi UBP-X700')" class="btn btn--primary btn--solid btn--block">Buy</button>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__image">
+            <img src="https://i5.walmartimages.com/asr/41ffbec1-d9b5-4899-8630-0d60a832e09d.11d1dc7211bb5847ea86d0870b882a5a.jpeg?odnWidth=282&odnHeight=100&odnBg=ffffff" alt="" />
+          </div>
+          <h3>Vitade Webcam 1080P with Microphone HD Web Cam 826M USB Video Camera</h3>
+          <p>$39.88</p>
+          <div class="product__footer isAuth hidden">
+            <button onclick="addWishList('Vitade Webcam 1080P with Microphone HD Web Cam 826M USB Video Camera')" class="btn btn--primary btn--block">Add to wish list</button>
+            <button onclick="buyProduct('Vitade Webcam 1080P with Microphone HD Web Cam 826M USB Video Camera')" class="btn btn--primary btn--solid btn--block">Buy</button>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__image">
+            <img src="https://i5.walmartimages.com/asr/9b8fe994-f5da-4fb5-8368-5cdc39a73151.6c0738efc501de3c035724d84907c8df.jpeg?odnHeight=200&odnWidth=200&odnBg=ffffff" alt="" />
+          </div>
+          <h3>Superbox S2 Pro Media Player, 6K Android 9.0 TV Dual-Band Wi-Fi 2.4G/5G Compatible - 2021</h3>
+          <p>$299.00</p>
+          <div class="product__footer isAuth hidden">
+            <button onclick="addWishList('Superbox S2 Pro Media Player, 6K Android 9.0 TV Dual-Band Wi-Fi 2.4G/5G Compatible - 2021')" class="btn btn--primary btn--block">Add to wish list</button>
+            <button onclick="buyProduct('Superbox S2 Pro Media Player, 6K Android 9.0 TV Dual-Band Wi-Fi 2.4G/5G Compatible - 2021')" class="btn btn--primary btn--solid btn--block">Buy</button>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__image">
+            <img src="https://i5.walmartimages.com/asr/7185a974-11d8-4456-91c8-8b303a0b4e2a_1.65ea902cf4ec2dd8391a90061ef06cf7.jpeg?odnHeight=200&odnWidth=200&odnBg=ffffff" alt="" />
+          </div>
+          <h3>Epson WorkForce WF-2850 Wireless All-in-One Color Inkjet Printer</h3>
+          <p>$80.00</p>
+          <div class="product__footer isAuth hidden">
+            <button onclick="addWishList('Epson WorkForce WF-2850 Wireless All-in-One Color Inkjet Printer')" class="btn btn--primary btn--block">Add to wish list</button>
+            <button onclick="buyProduct('Epson WorkForce WF-2850 Wireless All-in-One Color Inkjet Printer')" class="btn btn--primary btn--solid btn--block">Buy</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/shop.js"></script>
+  </body>
+</html>

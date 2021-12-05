@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <link rel="shortcut icon" href="img/icon.svg" type="image/svg" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="background background--1">
+    <nav class="navbar">
+      <div class="container container--md">
+        <div class="navbar__logo">
+          <img src="img/icon.svg" alt="" />
+          <h4>Electronics Shop</h4>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item">
+            <a href="home.html">Home</a>
+          </li>
+          <li class="navbar__menu__item">
+            <a href="shop.html">Shop</a>
+          </li>
+          <li class="navbar__menu__item">
+            <a href="contact.html">Contact</a>
+          </li>
+          <li class="notAuth navbar__menu__item hidden">
+            <a href="signin.html">Sign in</a>
+          </li>
+          <li class="notAuth navbar__menu__item hidden">
+            <a href="signup.html">Sign up</a>
+          </li>
+          <li class="isAuth navbar__menu__item hidden">
+            <button class="btn btn--primary btn--sm" onclick="signOut()">Sign out</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="wrapper--middle">
+      <form id="form" class="form container--sm" method="POST">
+        <h1 class="container__title text-center">Sign up</h1>
+        <label class="form-group">
+          <span class="form-group__label">First name</span>
+          <input type="text" name="first_name" class="form-group__control" required />
+        </label>
+        <label class="form-group">
+          <span class="form-group__label">Last name</span>
+          <input type="text" name="last_name" class="form-group__control" required />
+        </label>
+        <label class="form-group">
+          <span class="form-group__label">Email</span>
+          <input type="email" name="email" class="form-group__control" required />
+        </label>
+        <label class="form-group">
+          <span class="form-group__label">Password</span>
+          <input type="password" name="password" class="form-group__control" required />
+        </label>
+        <div class="form-group">
+          <button type="submit" class="btn btn--primary btn--block">Sign up</button>
+        </div>
+        <div class="text-center">
+          <a href="signin.html" class="link">Already have an account? Sign in</a>
+        </div>
+      </form>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/signup.js"></script>
+  </body>
+</html>

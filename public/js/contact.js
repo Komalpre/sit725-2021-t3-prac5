@@ -6,7 +6,7 @@ document.getElementById('form').onsubmit = (event) => {
   const formData = Object.fromEntries(new FormData(event.target));
 
   // Send request to server
-  fetch('/api/contacts', {
+  fetch('/contacts', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
