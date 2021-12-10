@@ -2,39 +2,17 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 
+// Express middleware
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 
+// Routes
+app.use('/api/accounts', require('./routes/accounts'));
+app.use('/api/contacts', require('./routes/contacts'));
 
-const { MongoClient } = require('mongodb');
-const MONGODB_URI = 'mongodb+srv://Sit-725-2021:8QQ1Ks9j6d0UEmwK@sit-725-prac4.t2u3p.mongodb.net/e-shop?retryWrites=true&w=majority';
-
-// Create MongoDB client
-const mongoClient = new MongoClient(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
-
-// Connect to MongoDB
-mongoClient.connect((err) => {
-    if (err) throw err;
-    console.log('Database connected');
-  });
-
-
-// To make a contact post.
-let contactCollection;
-app.post("/contacts",(req,res) =>{
-    contactCollection = mongoClient.db('e-shop').collection('contact');
-    contactCollection.insertOne(req.body, (err) => {
-      if (err) {
-        return res.status(500).json({ message: err.message });
-      }
-      res.json({
-        success: true,
-        message: 'Your message has been sent!',
-      });
-    });
+// Serve home page
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/home.html');
 });
 
 const port = 3000;
